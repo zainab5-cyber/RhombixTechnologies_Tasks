@@ -1,0 +1,6 @@
+ # Save packets to a pcap file
+    def start_sniffer():
+    print("Starting packet sniffer...")
+     sniff(prn=packet_callback, store=1, count=10)  # Capture 10 packets
+     wrpcap("captured_packets.pcap", sniffed_packets)
+packets = rdpcap("captured_packets.pcap")
